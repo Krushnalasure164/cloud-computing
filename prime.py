@@ -1,12 +1,15 @@
-num = 29  # You can change this value
+n = int(input("Enter number: "))
+prime = True
 
-if num > 1:
-    # Check for factors
-    for i in range(2, num):
-        if (num % i) == 0:
-            print(f"{num} is not a prime number")
-            break
-    else:
-        print(f"{num} is a prime number")
+if n <= 1:
+    prime = False
 else:
-    print(f"{num} is not a prime number")
+    for i in range(2, n):
+        if n % i == 0:
+            prime = False
+            break
+
+if prime:
+    print("Prime Number")
+else:
+    print("Not Prime Number")
